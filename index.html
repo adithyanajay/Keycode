@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1 id="keycode">😁</h1>
+        <p id="details">PRESS ANY KEY!</p>
+    </div>
+
+    <script>
+        const keycode = document.getElementById("keycode")
+        const details = document.getElementById("details")
+        window.addEventListener("keydown", (e)=>{
+            keycode.innerHTML= e.keyCode
+            console.log(e.keyCode)
+            details.innerHTML = `KEYCODE OF: <span>${e.key}</span>`
+        })
+    </script>
+</body>
+</html>
